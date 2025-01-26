@@ -90,7 +90,7 @@ export default function Home() {
 //* function 1 .. 
 
   const explainthiscode = async () => {
-    let url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' + API_KEY
+    let url = "PASTE_API_URL_HERE.." + API_KEY
 
     let messageToSend = [
       ...trainingPrompt,
@@ -127,7 +127,7 @@ export default function Home() {
 //* function2 
 
       const errorInThisCode = async () => {
-        let url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' + API_KEY
+        let url = "PASTE_API_URL_HERE.." + API_KEY
 
         let messageToSend = [
           ...ErrorHandlePrompt,
@@ -165,7 +165,7 @@ export default function Home() {
 
 
       const ComplexityOfThisCode = async () => {
-        let url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' + API_KEY
+        let url = "PASTE_API_URL_HERE.." + API_KEY
 
         let messageToSend = [
           ...ComplexityPrompt,
