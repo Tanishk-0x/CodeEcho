@@ -1,3 +1,2 @@
 # CodeEcho
-👨‍💻 Virtual Code Explainer 
-hello myself tanishk
+👨‍💻 Virtual Code Explainer Using Gemini api 
