@@ -44,7 +44,7 @@ const CodeSummarizer = () => {
       const params = `The level of the summary should be ${level}, the number of words should be ${words}, the tags are ${tag}, and the focus hashtag is ${hash}`;
       const FinalPrompt = PROMPT + " " + " { " + params + " } " ; 
       
-      const res = await axios.post("http://localhost:5000/ai/get-response" , 
+      const res = await axios.post("https://codeechobackend.onrender.com/ai/get-response" , 
         {code , instruction : FinalPrompt , title:"Code_Summarizer" } ,
          {withCredentials : true } ); 
 

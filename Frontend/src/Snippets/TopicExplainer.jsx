@@ -44,7 +44,7 @@ const TopicExplainer = () => {
       try {
         setLoading(true) ; 
         const Prompt = PROMPTS.FlowChartData ; 
-        const res = await axios.post("http://localhost:5000/ai/get-response" , 
+        const res = await axios.post("https://codeechobackend.onrender.com/ai/get-response" , 
           {code : topic , instruction : Prompt , title:"Topic_Explainer" }, 
           {withCredentials : true}
         ); 
@@ -55,7 +55,7 @@ const TopicExplainer = () => {
         setFlowChart(cleared) ; 
 
         const Prompt0 = PROMPTS.TopicExplain ; 
-        const result = await axios.post("http://localhost:5000/ai/get-response" , 
+        const result = await axios.post("https://codeechobackend.onrender.com/ai/get-response" , 
           {code : topic , instruction : Prompt0 , title:"NULL"}, 
           {withCredentials : true}
         ); 

@@ -66,7 +66,7 @@ const Chat = () => {
       "Sorry, I specialize only in ${topic}. Please ask questions related to this topic."
       Ensure a professional, tutoring-focused tone throughout your responses.
       `; 
-      const res = await axios.post('http://localhost:5000/ai/get-response', {
+      const res = await axios.post('https://codeechobackend.onrender.com/ai/get-response', {
         code : input , instruction : Prompt , title:"Chat" 
       } , {withCredentials : true});
 
@@ -85,7 +85,7 @@ const Chat = () => {
     try {
       setLoading(true) ; 
       const PROMPT = PROMPTS.ChatChart ; 
-      const res = await axios.post("http://localhost:5000/ai/get-response" , 
+      const res = await axios.post("https://codeechobackend.onrender.com/ai/get-response" , 
         { code : tempchart , instruction : PROMPT , title:"ChatEase" }, 
         {withCredentials : true} 
       ); 

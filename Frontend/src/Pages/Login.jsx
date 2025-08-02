@@ -43,7 +43,7 @@ const Login = () => {
                 setLoading(true) ; 
 
                 // ---- Api calling ----
-                const res = await axios.post("http://localhost:5000/auth/login" , formData , {
+                const res = await axios.post("https://codeechobackend.onrender.com/auth/login" , formData , {
                     withCredentials : true , //accessing cookies 
                 });
                 setMessage(res.data.message) ; 

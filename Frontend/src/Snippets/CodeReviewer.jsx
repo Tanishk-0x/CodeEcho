@@ -52,7 +52,7 @@ const CodeReviewer = () => {
     try {
       setLoading(true) ; 
       const PROMPT = PROMPTS.CodeReviews ; 
-      const res = await axios.post("http://localhost:5000/ai/get-response" ,
+      const res = await axios.post("https://codeechobackend.onrender.com/ai/get-response" ,
          {code , instruction : PROMPT , title : "NULL"}, 
          {withCredentials: true}  ) ; 
 
@@ -78,7 +78,7 @@ const CodeReviewer = () => {
     try {
       setLoading(true) ; 
       const PROMPT = PROMPTS.PieChart ; 
-      const res = await axios.post("http://localhost:5000/ai/get-response" ,
+      const res = await axios.post("https://codeechobackend.onrender.com/ai/get-response" ,
          {code , instruction : PROMPT , title : "Code_Reviewer" } ,
           {withCredentials : true} ) ; 
 

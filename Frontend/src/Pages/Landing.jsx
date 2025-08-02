@@ -98,7 +98,7 @@ const Landing = () => {
     const checkLoginStatus = async () => {
 
         try {
-          const res = await axios.get("http://localhost:5000/check/authme" , {withCredentials : true}) ; 
+          const res = await axios.get("https://codeechobackend.onrender.com/check/authme" , {withCredentials : true}) ; 
           if(res.data.success){
             setUser(res.data.user) ; 
             setUserName(res.data.user.name) ; 

@@ -41,7 +41,7 @@ const CodeQuizzer = () => {
     try {
       setLoading(true) ; 
       const Prompt = PROMPTS.CodeQuizzer ; 
-      const res = await axios.post("http://localhost:5000/ai/get-response" , 
+      const res = await axios.post("https://codeechobackend.onrender.com/ai/get-response" , 
         { code , instruction : Prompt , title:"CodeQuizzer" }, 
         {withCredentials : true}
       ); 

@@ -67,7 +67,7 @@ const CodeComment = () => {
         Keep comments meaningful, technically accurate, and suited to the chosen style.
     ` ; 
 
-      const res = await axios.post("http://localhost:5000/ai/get-response" , 
+      const res = await axios.post("https://codeechobackend.onrender.com/ai/get-response" , 
         { code , instruction : Prompt , title : "Comment_Generator"} , 
         { withCredentials : true } 
       ); 

@@ -38,7 +38,7 @@ const SignUp = () => {
         try {
             setloading(true) ; 
             // ---- Api Calling ----
-            const res = await axios.post("http://localhost:5000/auth/signup" , formData) ; 
+            const res = await axios.post("https://codeechobackend.onrender.com/auth/signup" , formData) ; 
             setMessage(res.data.message) ; 
             console.log(message) ; 
             console.log(res) ; 
