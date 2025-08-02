@@ -44,5 +44,4 @@ coverage/
 *.DS_Store
 
 # Optional:
-package-lock.json
 yarn.lock
