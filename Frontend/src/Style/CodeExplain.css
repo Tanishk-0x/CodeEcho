@@ -1,0 +1,458 @@
+.ex-main {
+    background-color: #080808;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ex-header {
+    width: 90%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+    margin-top: 10px;
+    background-color: #121212;
+}
+
+.ex-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.ex-p {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.ex-by {
+    color: #777;
+    font-size: 10px;
+}
+
+.ex-controls {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex-contents {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.ex-code {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+    border-radius: 8px;
+    margin-top: 10px;
+    height: 280px;
+    overflow: auto;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+.ex-response {
+    background-color: #121212;
+    font-size: 14px;
+    color: #ccc;
+    width: 100%;
+    overflow: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+    min-height: 200px;
+    max-height: 400px;
+    padding: 30px;
+}
+
+.code {
+    border: none;
+    font-size: 16px;
+    color: #e0e0e0;
+    background-color: #0a0a0a;
+}
+
+.ex-btn, .rev-btn {
+    background-color: #222;
+    color: #f0f0f0;
+    height: 34px;
+    width: 75px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    border-bottom: 2px solid #888;
+    border-right: 2px solid #888;
+    transition: 0.1s;
+}
+
+.ex-btn:hover, .rev-btn:hover {
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.ex-chart {
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    margin-bottom: 10px;
+}
+
+.ex-fav {
+    height: 34px;
+    width: 34px;
+    border: none;
+    cursor: pointer;
+    background-color: #222;
+    color: #f0f0f0;
+    font-size: 18px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex-fav:hover {
+    color: #0a0a0a;
+}
+
+/* ------------ Responsive Ness ------------ */
+
+@media (max-width: 780px) {
+    .ex-contents {
+        width: 100%;
+    }
+    .ex-code {
+        width: 95%;
+        min-height: 180px;
+        max-height: 280px;
+    }
+    .ex-response {
+        width: 95%;
+        min-height: 200px;
+        max-height: 350px;
+    }
+    .code {
+        font-size: 12px;
+    }
+    .ex-chart {
+        width: 95%;
+    }
+    .ex-header{
+        width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+    .ex-controls {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .ex-header {
+        width: 95%;
+        flex-direction: column;
+        height: 58px;
+        flex-direction: row;
+    }
+    .ex-controls{
+        gap: 4px;
+    }
+}
+
+.ex-chart{
+    display: flex;
+    overflow: auto;
+    transition: 0.2s;
+    align-items: flex-start; 
+}
+
+/* ------------- Code Reviewer ------------- */
+
+.review-main {
+    background-color: #080808;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+}
+
+.review-header {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+    background-color: #121212;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.review-contents {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rev-cr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 350px;
+    gap: 20px;
+}
+
+.rev-code {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 98%;
+    border-radius: 8px;
+    gap: 15px;
+}
+
+.rev-usercode {
+    height: 70%;
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+    background-color: #121212;
+    width: 98%;
+}
+
+.rev-section {
+    height: 28%;
+    width: 98%;
+    box-shadow: 0 0 6px #555, 0 0 12px #555;
+    background-color: #101010;
+    overflow: auto;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.rev-section::-webkit-scrollbar{
+    display: none;
+}
+
+.rev-pie {
+    width: 50%;
+    background-color: #0c0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98%;
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+}
+
+.rev-others {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-scenes {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.rev-final {
+    background-color: #101010;
+    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #555, 0 0 12px #555;
+    overflow: auto;
+    padding: 10px;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+.rev-final::-webkit-scrollbar{
+    display: none ; 
+}
+.rev-one::-webkit-scrollbar{
+    display: none; 
+}
+.rev-one {
+    background-color: #101010;
+    height: 95%;
+    width: 32%;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #333, 0 0 12px #333;
+    overflow: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.rev-one, .rev-final, .rev-section {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.rev-one span, .rev-final span, .rev-section span {
+    color: #999;
+    font-size: 12px;
+}
+
+.potential,
+.smell,
+.suggestion {
+    box-shadow: 0 0 6px #444, 0 0 12px #444;
+    color: #ccc;
+}
+
+.review-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.score {
+    box-shadow: 0 0 6px #555, 0 0 12px #555;
+    height: 40px;
+    width: 80px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    font-size: 20px;
+}
+
+.score span {
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .review-header {
+        width: 95%;
+    }
+    .ex-p {
+        font-size: 25px;
+    }
+    .review-contents {
+        width: 100%;
+    }
+    .rev-cr {
+        flex-direction: column;
+    }
+    .rev-code {
+        width: 95%;
+        height: 300px;
+    }
+    .rev-pie {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-header {
+        width: 95%;
+        flex-direction: row;
+        height: 55px;
+        gap: 10px;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    .ex-p {
+        font-size: 20px;
+    }
+    .review-controls {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .score {
+        height: 35px;
+        width: 70px;
+        font-size: 18px;
+    }
+    .review-contents {
+        width: 100%;
+    }
+    .rev-cr {
+        flex-direction: column;
+        height: auto;
+    }
+    .rev-code {
+        width: 95%;
+        height: auto;
+    }
+    .rev-usercode {
+        height: 250px;
+        width: 100%;
+    }
+    .rev-section {
+        height: auto;
+        min-height: 80px;
+    }
+    .rev-pie {
+        width: 95%;
+        height: 300px;
+    }
+    .review-scenes {
+        flex-direction: column;
+        height: auto;
+    }
+    .rev-one {
+        width: 95%;
+        height: auto;
+        min-height: 80px;
+    }
+    .rev-final {
+        width: 95%;
+        height: auto;
+        min-height: 80px;
+    }
+    .rev-one p,
+    .rev-final p,
+    .rev-section p {
+        font-size: 13px;
+    }
+    .rev-one span,
+    .rev-final span,
+    .rev-section span {
+        font-size: 12px;
+    }
+}
+
+
+.score {
+    height: 34px;
+}

@@ -1,0 +1,381 @@
+
+.profile-outer {
+  background-color: #080808;
+  min-height: 100vh;
+  padding: 1rem;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-header {
+  height: 58px;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+  flex-wrap: wrap;
+}
+
+.profile-header button {
+  background-color: #454545;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.profile-header button:hover {
+  background-color: #404040;
+}
+
+.name h1 span {
+  color: #d6d6d6;
+  font-weight: bold;
+}
+
+.email span {
+  font-size: 14px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-content {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user-cred {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.history-container {
+  flex: 1;
+  min-width: 300px;
+  max-height: 450px;
+  overflow: auto;
+  background-color: #101010;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #222;
+  color: #ffffff;
+}
+
+.snippet {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 80px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+.profile-favourites {
+  flex: 1;
+  min-width: 300px;
+  max-height: 450px;
+  overflow: auto;
+  background-color: #101010;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+}
+
+.favourites-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.favourites-column {
+  flex: 1;
+  min-width: 140px;
+}
+
+.favourites-column h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.favourites-box {
+  background-color: #111;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #ccc;
+  overflow-y: auto;
+  max-height: 100px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3f3f3f;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .user-cred {
+    flex-direction: column;
+  }
+
+  .profile-header {
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .favourites-container {
+    flex-direction: column;
+  }
+
+  .history-container,
+  .profile-favourites {
+    max-height: 300px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-cred {
+    flex-direction: column;
+  }
+
+  .profile-header {
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .favourites-container {
+    flex-direction: column;
+  }
+
+  .history-container,
+  .profile-favourites {
+    max-height: 250px; 
+    overflow-y: auto;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+
+.profile-stats {
+  height: 98%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.tier {
+  background-color: #101010;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+}
+.calls {
+  background-color: #101010;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+}
+.remain {
+  background-color: #101010;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+}
+
+.stats-title {
+  color: #9b9b9b;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+}
+
+.stats-num {
+  font-size: 22px;
+  color: #34f100;
+}
+
+
+@media (max-width : 768px) {
+  .stats-title {
+    font-size: 14px;
+  }
+  .stats-num{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    gap: 10px;
+    height: 75px;
+  }
+
+  .logout-btn {
+    margin-left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 0.5rem 1rem;
+    gap: 8px;
+  }
+
+  .profile-header h1 {
+    font-size: 18px;
+  }
+
+  .profile-header .email span {
+    font-size: 12px;
+  }
+
+  .profile-header button {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+  .logout-btn{
+    border-radius: 2px;
+  }
+}
+.favourites-box {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #ccc;
+  height: 120px; 
+  background-color: #181818;
+}
+
+.favourites-box::-webkit-scrollbar{
+  display: none;
+}
+
+.code-block, .response-block {
+  flex: 1;
+  background-color: #1a1a1a;
+  padding: 6px;
+  border-radius: 6px;
+  overflow-y: auto;
+  height: 100%; 
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.code-block::-webkit-scrollbar,
+.response-block::-webkit-scrollbar {
+  width: 4px;
+}
+.code-block::-webkit-scrollbar-thumb,
+.response-block::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .favourites-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .code-block, .response-block {
+    height: 80px;
+  }
+}
+
+.favourites-column {
+  overflow: auto;
+}
+
+.favourites-box button {
+  height: 20px;
+  width: 20px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: black;
+  border: none;
+}
+
+.favourites-box button:hover {
+  color: #cecece;
+}
+
+.snippet::-webkit-scrollbar {
+  display: none;
+}
+
+.favourites-box{
+  flex-direction: column;
+}
+
+.favourites-actions {
+  display: flex;
+  gap: 2px;
+  flex-direction: row;
+  justify-content: flex-end;
+}

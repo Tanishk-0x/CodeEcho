@@ -1,0 +1,322 @@
+body {
+  background-color: #0a0a0a;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ddd;
+}
+
+.comm-main {
+  background-color: #080808;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.comm-header {
+  background-color: #121212;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+  color: #eee;
+  flex-wrap: wrap;
+}
+
+.comm-header .by h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #f5f5f5;
+}
+
+.comm-header .by p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.comment-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.silder-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+}
+
+.comment-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background: #333;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.comment-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 1px solid #666;
+}
+
+.comment-slider::-webkit-slider-thumb:hover {
+  background: #eee;
+}
+
+.comment-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 1px solid #666;
+  cursor: pointer;
+}
+
+.comment-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  color: #bbb;
+  margin-top: 4px;
+}
+
+.selected {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.selected strong {
+  color: #eee;
+}
+
+.comm-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.comm-btn button {
+  height: 35px;
+  width: 90px;
+  background-color: #222;
+  color: #eee;
+  border: none;
+  border-radius: 6px;
+  border-bottom: 2px solid #444;
+  border-right: 2px solid #444;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.comm-btn button:hover {
+  background-color: #333;
+  border-bottom: none;
+  border-right: none;
+}
+
+.comm-outer {
+  background-color: #0a0a0a;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.comm-left,
+.comm-right {
+  background-color: #121212;
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #333, 0 0 12px #333;
+  min-width: 300px;
+  height: 550px;
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.comm-bars {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  height: 26px;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.red, .yellow, .green {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+.mac-btns button {
+  background: transparent;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.mac-btns button:hover {
+  color: #ccc;
+}
+
+.comm-code {
+  background-color: #101010;
+  flex: 1;
+  border-top: 1px solid #222;
+  padding: 10px;
+  overflow: auto;
+  color: #eee;
+}
+
+.comm-right {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.comm-nav {
+  border-bottom: 2px solid #444;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #121212;
+}
+
+.comm-nav button {
+  background: transparent;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.comm-nav button:hover {
+  color: #ccc;
+}
+
+.comm-output {
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
+  color: #ddd;
+  background-color: #101010;
+  font-size: 0.95rem;
+}
+.comment-labels{
+    gap: 28px;
+}
+
+@media (max-width: 768px) {
+
+  .comm-outer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .comm-left,
+  .comm-right {
+    width: 100%;
+    flex: none;
+    max-height: 400px;
+  }
+
+  .comm-code,
+  .comm-output {
+    max-height: 400px;
+  }
+
+  .comm-output::-webkit-scrollbar,
+  .comm-code::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .comm-header .by h1 {
+    font-size: 1.4rem;
+  }
+
+  .comm-header {
+    width: 95%;
+    padding: 12px 16px;
+  }
+
+  .comm-outer {
+    width: 95%;
+  }
+
+  .comm-header .by p {
+    font-size: 0.8rem;
+  }
+
+  .silder-wrap {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .comment-slider {
+    height: 6px;
+  }
+
+  .comment-labels {
+    font-size: 9px;
+  }
+
+  .comm-btn button {
+    width: 80px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .comm-nav {
+    padding: 6px 10px;
+  }
+
+  .comm-code,
+  .comm-output {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+
+  .comm-code{
+    font-size: 14px;
+  }
+  .como-cd::-webkit-scrollbar{
+    display: none;
+  }
+}
