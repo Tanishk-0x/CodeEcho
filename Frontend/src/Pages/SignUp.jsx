@@ -43,10 +43,25 @@ const SignUp = () => {
             console.log(message) ; 
             console.log(res) ; 
             setloading(false) ; 
-            toast.success("Signup Successfully") ; 
-            setTimeout(() => {
-                navigate('/login'); 
-            }, 2000);
+            
+            // setTimeout(() => {
+            //     navigate('/login'); 
+            // }, 2000);
+
+            // ---- Api calling ----
+                const lgres = await axios.post("https://codeechobackend.onrender.com/auth/login" , formData , {
+                    withCredentials : true , //accessing cookies 
+                });
+                setMessage(lgres.data.message) ; 
+                // ----------------------------------
+                    localStorage.setItem('#K&v@M!d$Q*L' , 'true' ); 
+                // ---------------------------------
+                setloading(false) ; 
+                toast.success("Signup Successfully") ;   
+                setTimeout(() => {
+                    navigate('/') ; 
+                }, 1000);
+
         }
 
         catch (error) {

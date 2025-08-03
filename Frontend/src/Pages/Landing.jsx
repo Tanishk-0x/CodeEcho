@@ -128,20 +128,29 @@ const Landing = () => {
   }; 
 
   const sendMessage = () => {
-    emailjs.send(
-      "service_mxlswiq" , 
-      "template_hebqdcv" , 
-      templateParams ,  
-      "CEoGpm9Q9kVRKa3DR" , 
-    )
-    .then( (result) => {
-      setMessage('') ; 
-      toast("Message send to admin")
- 
-    } , 
-    (error) => {
+
+    if ( localStorage.getItem('#K&v@M!d$Q*L') === 'true' ){
+      emailjs.send(
+          "service_mxlswiq" , 
+          "template_hebqdcv" , 
+          templateParams ,  
+          "CEoGpm9Q9kVRKa3DR" , 
+        )
+        .then( (result) => {
+          setMessage('') ; 
+          toast("We Appreciate Your Feedback")
+    
+        } , 
+        (error) => {
+        }
+      )
     }
-  )
+
+    else{
+      toast("Please Login First!")
+    }
+
+
 
   }
 
